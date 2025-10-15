@@ -6,7 +6,8 @@
       "Bash(git commit:*)",
       "Bash(git config:*)",
       "Bash(export VERCEL_TOKEN=\"ATf6nkTO2d0jLsNkxXcdU43i\")",
-      "Bash(vercel:*)"
+      "Bash(vercel:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

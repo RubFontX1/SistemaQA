@@ -27,7 +27,6 @@ export default function HomePage() {
       description: "Aprende a testear aplicaciones web: pruebas de humo, API, E2E y más",
       icon: FlaskConical,
       tutorialCount: 6,
-      gradient: "from-blue-600 to-cyan-600",
       href: "/modules/pruebas-web"
     },
     {
@@ -36,7 +35,6 @@ export default function HomePage() {
       description: "Testing de componentes y funciones individuales",
       icon: TestTube2,
       tutorialCount: 8,
-      gradient: "from-cyan-600 to-blue-500",
       href: "#",
       comingSoon: true
     },
@@ -46,7 +44,6 @@ export default function HomePage() {
       description: "Pipelines, GitHub Actions, Jenkins y deployment automatizado",
       icon: Workflow,
       tutorialCount: 5,
-      gradient: "from-blue-500 to-indigo-600",
       href: "#",
       comingSoon: true
     },
@@ -56,7 +53,6 @@ export default function HomePage() {
       description: "Playwright, Cypress, Jest, Selenium y más",
       icon: Wrench,
       tutorialCount: 10,
-      gradient: "from-indigo-600 to-purple-600",
       href: "#",
       comingSoon: true
     }
@@ -97,15 +93,15 @@ export default function HomePage() {
 
         <div className="mx-auto flex max-w-[1000px] flex-col items-center gap-6 text-center">
           {/* Badge */}
-          <div className="flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm">
+          <div className="flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm animate-scaleIn">
             <Sparkles className="h-4 w-4 text-primary animate-pulse" />
             <span className="text-primary font-medium">Plataforma de Testing Profesional</span>
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl">
+          <h1 className="text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl animate-fadeIn" style={{ animationDelay: "0.1s" }}>
             Domina el{" "}
-            <span className="text-gradient">
+            <span className="text-primary">
               Testing
             </span>
             <br />
@@ -113,7 +109,7 @@ export default function HomePage() {
           </h1>
 
           {/* Subtitle */}
-          <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl md:text-2xl leading-relaxed">
+          <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl md:text-2xl leading-relaxed animate-fadeIn" style={{ animationDelay: "0.2s" }}>
             Aprende QA, automatización y CI/CD con tutoriales interactivos.
             De principiante a experto en{" "}
             <span className="text-primary font-semibold">testing profesional</span>.
@@ -121,14 +117,14 @@ export default function HomePage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Button size="lg" asChild className="bg-gradient-ocean hover:opacity-90 transition-all text-lg px-8 py-6 h-auto">
+            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 transition-colors text-lg px-8 py-6 h-auto animate-slideInLeft" style={{ animationDelay: "0.3s", opacity: 0 }}>
               <Link href="/modules/pruebas-web">
                 <Rocket className="mr-2 h-5 w-5" />
                 Comenzar Ahora
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-primary/30 hover:bg-primary/5 text-lg px-8 py-6 h-auto">
+            <Button size="lg" variant="outline" asChild className="border-primary/30 hover:bg-primary/5 text-lg px-8 py-6 h-auto animate-slideInRight" style={{ animationDelay: "0.3s", opacity: 0 }}>
               <Link href="/modules/pruebas-web">
                 <FlaskConical className="mr-2 h-5 w-5" />
                 Ver Tutoriales
@@ -137,17 +133,17 @@ export default function HomePage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-border/50">
+          <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-border/50 animate-fadeIn" style={{ animationDelay: "0.4s", opacity: 0 }}>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient">29+</div>
+              <div className="text-4xl font-bold text-primary">29+</div>
               <div className="text-sm text-muted-foreground mt-1">Tutoriales</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient">4</div>
+              <div className="text-4xl font-bold text-primary">4</div>
               <div className="text-sm text-muted-foreground mt-1">Módulos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient">100%</div>
+              <div className="text-4xl font-bold text-primary">100%</div>
               <div className="text-sm text-muted-foreground mt-1">Gratis</div>
             </div>
           </div>
@@ -186,7 +182,7 @@ export default function HomePage() {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Elige Tu{" "}
-              <span className="text-gradient">Camino</span>
+              <span className="text-primary">Camino</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-[600px] mx-auto">
               Desde pruebas básicas hasta CI/CD avanzado
@@ -203,8 +199,8 @@ export default function HomePage() {
                   className="relative overflow-hidden border-primary/20 hover:border-primary/40 transition-all group hover:card-glow-hover glassmorphism card-3d"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${module.gradient} opacity-5 group-hover:opacity-15 transition-opacity duration-500`} />
+                  {/* Background */}
+                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
 
                   {/* Coming Soon Badge */}
                   {module.comingSoon && (
@@ -215,7 +211,7 @@ export default function HomePage() {
 
                   <CardHeader className="relative">
                     <div className="flex items-start gap-4 mb-3">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${module.gradient} shadow-lg`}>
+                      <div className="p-3 rounded-xl bg-primary shadow-lg">
                         <Icon className="h-7 w-7 text-white" />
                       </div>
                       <div className="flex-1">
@@ -235,7 +231,7 @@ export default function HomePage() {
                     <Button
                       asChild
                       variant={module.comingSoon ? "outline" : "default"}
-                      className={`w-full ${!module.comingSoon && "bg-gradient-ocean hover:opacity-90"}`}
+                      className={`w-full ${!module.comingSoon && "bg-primary hover:bg-primary/90"}`}
                       disabled={module.comingSoon}
                     >
                       <Link href={module.href}>
@@ -275,13 +271,13 @@ export default function HomePage() {
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 ¿Listo para convertirte en un{" "}
-                <span className="text-gradient">QA Expert</span>?
+                <span className="text-primary">QA Expert</span>?
               </h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-[600px] mx-auto">
                 Únete a miles de ingenieros que ya están dominando el testing y la automatización
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild className="bg-gradient-ocean hover:opacity-90 card-3d">
+                <Button size="lg" asChild className="bg-primary hover:bg-primary/90 card-3d">
                   <Link href="/register">
                     <Rocket className="mr-2 h-5 w-5" />
                     Crear Cuenta Gratis

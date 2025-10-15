@@ -1,23 +1,50 @@
 # 🧪 Sistema QA - Plataforma Educativa de Testing
 
-Una plataforma moderna e interactiva para aprender testing de software, construida con Next.js 15, TypeScript, Tailwind CSS y Prisma con tema **Blue Ocean Dark**.
+Una plataforma moderna e interactiva para aprender testing de software, construida con Next.js 15, TypeScript, Tailwind CSS y Prisma.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## 🌐 Demo en Vivo
+
+🔗 **[Ver Demo](https://sistema-l59lksm29-rubenbecerrafontecilla-8005s-projects.vercel.app)**
+
+## 🆕 Últimas Mejoras (Enero 2025)
+
+### ✅ Mejoras Visuales y UX
+- ❌ **Eliminados todos los degradados** - Diseño más limpio con colores sólidos
+- 🌓 **Sistema de temas claro/oscuro** - Toggle manual en el Navbar con next-themes
+- 🔘 **Botones corregidos** - Proporciones mejoradas con Radix UI Slot
+- 🎨 **Paleta refinada** - Colores optimizados para ambos modos (claro/oscuro)
+- ✨ **Partículas flotantes** - 20 partículas animadas en el fondo
+- 🎬 **Animaciones en hero** - FadeIn, ScaleIn, SlideIn con delays escalonados
+- 💎 **Glassmorphism mejorado** - Efectos de vidrio adaptados a ambos temas
+- 🎯 **8 sitios de práctica** - Sitios web reales para testing (SauceDemo, DemoQA, etc.)
+
+### 🔧 Mejoras Técnicas
+- Instalado `next-themes` para manejo de temas
+- Instalado `@radix-ui/react-slot` para componentes mejorados
+- Efectos card-glow adaptados a modo claro y oscuro
+- Animaciones CSS personalizadas (fadeIn, scaleIn, slideIn)
+- Provider de temas integrado en el layout
+
 ## ✨ Características
 
 - 🧪 **Tutoriales Interactivos**: Aprende QA, testing y automatización paso a paso
 - 💻 **Code Blocks con Syntax Highlighting**: Código copiable con resaltado profesional
-- 🎨 **Tema Blue Ocean Dark**: Diseño oscuro con gradientes azules océano
+- 🌓 **Modo Claro/Oscuro**: Tema dual con toggle manual en el Navbar
+- 🎨 **Diseño Refinado**: Paleta de colores azul profesional sin degradados
+- ✨ **Partículas Flotantes**: Fondo animado con 20 partículas en movimiento
+- 🎬 **Animaciones Suaves**: FadeIn, ScaleIn, SlideIn en el hero section
 - 🚀 **CI/CD & Automatización**: Aprende pipelines, GitHub Actions y deployment
 - 📱 **Responsive**: Funciona perfectamente en cualquier dispositivo
 - 🔐 **Autenticación**: Sistema completo de usuarios con NextAuth.js
 - 📊 **Progreso de Usuario**: Guarda tu progreso automáticamente
 - ⚡ **Ultra Rápido**: Optimizado con Turbopack y Server Components
-- 🎯 **Iconos Temáticos**: Iconos de QA, testing y automatización en toda la plataforma
+- 🎯 **Sitios de Práctica**: 8 sitios web reales para practicar testing
+- 💎 **Efectos Glassmorphism**: Cards con efecto de vidrio y 3D
 
 ## 📚 Módulos Disponibles
 
@@ -68,11 +95,13 @@ Abre **[http://localhost:4000](http://localhost:4000)** en tu navegador.
 ### Frontend
 - **Framework**: Next.js 15 (App Router)
 - **Lenguaje**: TypeScript
-- **Estilos**: Tailwind CSS 3.4 (Tema Blue Ocean Dark)
-- **Componentes UI**: shadcn/ui
+- **Estilos**: Tailwind CSS 3.4 (Tema Azul Refinado)
+- **Componentes UI**: shadcn/ui + Radix UI
 - **Iconos**: Lucide React (FlaskConical, Workflow, TestTube, etc.)
-- **Animaciones**: Framer Motion + CSS Animations
+- **Temas**: next-themes (modo claro/oscuro)
+- **Animaciones**: CSS Animations personalizadas (fadeIn, scaleIn, slideIn)
 - **Syntax Highlighting**: react-syntax-highlighter con Prism
+- **Efectos**: Glassmorphism, Card 3D, Partículas flotantes
 
 ### Backend
 - **Database ORM**: Prisma
@@ -106,7 +135,12 @@ sistema-qa-web/
 │   │   └── Navbar.tsx
 │   ├── tutorial/                # Componentes específicos de tutoriales
 │   │   └── CodeBlock.tsx
-│   └── shared/                  # Componentes compartidos
+│   ├── shared/                  # Componentes compartidos
+│   │   ├── ThemeToggle.tsx      # Toggle modo claro/oscuro
+│   │   ├── FloatingParticles.tsx # Partículas animadas
+│   │   └── PracticeSites.tsx    # Sitios de práctica
+│   └── providers/               # Context providers
+│       └── theme-provider.tsx   # Provider de temas
 ├── lib/                         # Utilidades y helpers
 │   ├── utils.ts                 # Funciones auxiliares
 │   └── prisma.ts                # Cliente de Prisma

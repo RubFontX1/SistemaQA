@@ -381,7 +381,7 @@ test.describe('Smoke Test - Login', () => {
 
         {/* Siguiente */}
         <section id="siguiente" className="mb-12 scroll-mt-20">
-          <Card className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 border-none">
+          <Card className="bg-primary/5 border-primary/20">
             <CardHeader>
               <CardTitle className="text-2xl">🎉 ¡Felicitaciones!</CardTitle>
               <CardDescription className="text-base">

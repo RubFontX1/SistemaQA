@@ -13,8 +13,7 @@ export function PracticeSites() {
       description: "Sitio clásico de práctica con 40+ escenarios de testing diferentes",
       icon: Globe,
       features: ["Login", "Checkboxes", "Drag & Drop", "Alerts", "File Upload"],
-      difficulty: "Principiante",
-      color: "from-blue-500 to-cyan-500"
+      difficulty: "Principiante"
     },
     {
       name: "Sauce Demo",
@@ -22,8 +21,7 @@ export function PracticeSites() {
       description: "E-commerce de prueba con múltiples usuarios y escenarios",
       icon: ShoppingCart,
       features: ["Login", "Carrito", "Checkout", "Inventario"],
-      difficulty: "Principiante",
-      color: "from-cyan-500 to-blue-600"
+      difficulty: "Principiante"
     },
     {
       name: "Automation Practice",
@@ -31,8 +29,7 @@ export function PracticeSites() {
       description: "Tienda online completa para practicar E2E testing",
       icon: ShoppingCart,
       features: ["Registro", "Compra completa", "Búsqueda", "Wishlist"],
-      difficulty: "Intermedio",
-      color: "from-blue-600 to-indigo-600"
+      difficulty: "Intermedio"
     },
     {
       name: "UI Test Automation Playground",
@@ -40,8 +37,7 @@ export function PracticeSites() {
       description: "Desafíos específicos de automatización de UI",
       icon: Play,
       features: ["Dynamic ID", "AJAX", "Visibility", "Text Input"],
-      difficulty: "Intermedio",
-      color: "from-indigo-600 to-purple-600"
+      difficulty: "Intermedio"
     },
     {
       name: "JSONPlaceholder",
@@ -49,8 +45,7 @@ export function PracticeSites() {
       description: "API REST gratuita para practicar testing de APIs",
       icon: Database,
       features: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-      difficulty: "Principiante",
-      color: "from-purple-600 to-pink-600"
+      difficulty: "Principiante"
     },
     {
       name: "ReqRes",
@@ -58,8 +53,7 @@ export function PracticeSites() {
       description: "API de prueba con usuarios, login y registro",
       icon: Users,
       features: ["Users API", "Login", "Register", "Delayed Response"],
-      difficulty: "Principiante",
-      color: "from-pink-600 to-rose-600"
+      difficulty: "Principiante"
     },
     {
       name: "DemoQA",
@@ -67,8 +61,7 @@ export function PracticeSites() {
       description: "Plataforma completa con formularios, widgets y más",
       icon: FileText,
       features: ["Forms", "Alerts", "Tables", "Widgets"],
-      difficulty: "Intermedio",
-      color: "from-rose-600 to-red-600"
+      difficulty: "Intermedio"
     },
     {
       name: "Practicing Test Automation",
@@ -76,8 +69,7 @@ export function PracticeSites() {
       description: "Sitio moderno con escenarios realistas de testing",
       icon: Lock,
       features: ["Auth", "Forms", "Dynamic Content", "Notifications"],
-      difficulty: "Avanzado",
-      color: "from-orange-500 to-amber-600"
+      difficulty: "Avanzado"
     }
   ]
 
@@ -97,7 +89,7 @@ export function PracticeSites() {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Practica en{" "}
-            <span className="text-gradient">Sitios Reales</span>
+            <span className="text-accent">Sitios Reales</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
             Sitios web especialmente diseñados para practicar testing, automation y QA
@@ -113,12 +105,12 @@ export function PracticeSites() {
                 className="group relative overflow-hidden border-primary/20 hover:border-primary/40 transition-all card-3d glassmorphism"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${site.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                {/* Background */}
+                <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
 
                 <CardHeader className="relative">
                   <div className="flex items-start justify-between mb-3">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${site.color} shadow-lg`}>
+                    <div className="p-3 rounded-xl bg-accent shadow-lg">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                     <span className={`text-xs px-2 py-1 rounded-full border ${difficultyColors[site.difficulty as keyof typeof difficultyColors]}`}>
@@ -177,7 +169,7 @@ export function PracticeSites() {
               <p className="text-muted-foreground mb-6">
                 Estos sitios son perfectos para practicar los tutoriales que aprenderás aquí
               </p>
-              <Button asChild size="lg" className="bg-gradient-ocean hover:opacity-90">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/modules/pruebas-web">
                   Ir a Tutoriales
                 </Link>
