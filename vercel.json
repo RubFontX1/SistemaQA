@@ -1,0 +1,13 @@
+{
+  "projectSettings": {
+    "name": "sistema-qa"
+  },
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "env": {
+    "NEXTAUTH_URL": "https://sistema-qa.vercel.app",
+    "NEXTAUTH_SECRET": "tu-secret-key-super-secreta-cambiala-en-produccion"
+  }
+}

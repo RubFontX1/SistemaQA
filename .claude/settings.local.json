@@ -3,7 +3,10 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(export VERCEL_TOKEN=\"ATf6nkTO2d0jLsNkxXcdU43i\")",
+      "Bash(vercel:*)"
     ],
     "deny": [],
     "ask": []

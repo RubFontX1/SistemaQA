@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { PracticeSites } from "@/components/shared/PracticeSites"
 import {
   FlaskConical,
   Zap,
@@ -158,9 +159,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1100px]">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {features.map((feature, index) => (
-              <Card key={index} className="relative overflow-hidden border-primary/20 bg-gradient-ocean-subtle hover:border-primary/40 transition-all hover:card-glow group">
+              <Card key={index} className="relative overflow-hidden border-primary/20 glassmorphism hover:border-primary/40 transition-all hover:card-glow-hover group card-3d">
                 <CardHeader>
-                  <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
+                  <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors group-hover:scale-110 duration-300">
                     <feature.icon className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
@@ -199,11 +200,11 @@ export default function HomePage() {
               return (
                 <Card
                   key={module.id}
-                  className="relative overflow-hidden border-primary/20 hover:border-primary/40 transition-all group hover:card-glow"
+                  className="relative overflow-hidden border-primary/20 hover:border-primary/40 transition-all group hover:card-glow-hover glassmorphism card-3d"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${module.gradient} opacity-5 group-hover:opacity-10 transition-opacity`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${module.gradient} opacity-5 group-hover:opacity-15 transition-opacity duration-500`} />
 
                   {/* Coming Soon Badge */}
                   {module.comingSoon && (
@@ -259,13 +260,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Practice Sites Showcase */}
+      <PracticeSites />
+
       {/* CTA Section */}
       <section className="container py-24">
         <div className="mx-auto max-w-[900px]">
-          <Card className="relative overflow-hidden border-primary/30 bg-gradient-ocean-subtle">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/10 to-blue-700/10" />
+          <Card className="relative overflow-hidden border-primary/30 glassmorphism card-glow">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/10 to-blue-700/10 animate-pulse-slow" />
             <CardContent className="relative p-12 text-center">
-              <Sparkles className="h-12 w-12 text-primary mx-auto mb-6 animate-pulse" />
+              <div className="relative inline-block">
+                <Sparkles className="h-12 w-12 text-primary mx-auto mb-6 animate-pulse" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-accent rounded-full animate-ping" />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 ¿Listo para convertirte en un{" "}
                 <span className="text-gradient">QA Expert</span>?
@@ -274,13 +281,13 @@ export default function HomePage() {
                 Únete a miles de ingenieros que ya están dominando el testing y la automatización
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild className="bg-gradient-ocean hover:opacity-90">
+                <Button size="lg" asChild className="bg-gradient-ocean hover:opacity-90 card-3d">
                   <Link href="/register">
                     <Rocket className="mr-2 h-5 w-5" />
                     Crear Cuenta Gratis
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="border-primary/30 hover:bg-primary/5">
+                <Button size="lg" variant="outline" asChild className="border-primary/30 hover:bg-primary/5 card-3d">
                   <Link href="/modules/pruebas-web">
                     Ver Tutoriales
                   </Link>
