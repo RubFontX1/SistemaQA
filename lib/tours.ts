@@ -1,22 +1,17 @@
 import { driver, DriveStep } from "driver.js";
 import "driver.js/dist/driver.css";
 
-// Configuración base para todos los tours - Estilo minimalista con spotlight
-const baseConfig = {
-  animate: true,
-  doneBtnText: '✓',
-  closeBtnText: '×',
-  nextBtnText: '→',
-  prevBtnText: '←',
-  showProgress: false,
-  popoverClass: 'driverjs-theme-spotlight',
-  showButtons: ['next', 'close'] as const,
-};
-
 // Tour: Cómo llegar a las pruebas de humo
 export const smokeTour = () => {
   const driverObj = driver({
-    ...baseConfig,
+    animate: true,
+    doneBtnText: '✓',
+    closeBtnText: '×',
+    nextBtnText: '→',
+    prevBtnText: '←',
+    showProgress: false,
+    popoverClass: 'driverjs-theme-spotlight',
+    showButtons: ['next', 'close'],
     steps: [
       {
         element: '#nav-practice',
@@ -35,7 +30,14 @@ export const smokeTour = () => {
 // Tour: Ir a la sección de páginas de pruebas
 export const practicePagesTour = () => {
   const driverObj = driver({
-    ...baseConfig,
+    animate: true,
+    doneBtnText: '✓',
+    closeBtnText: '×',
+    nextBtnText: '→',
+    prevBtnText: '←',
+    showProgress: false,
+    popoverClass: 'driverjs-theme-spotlight',
+    showButtons: ['next', 'close'],
     steps: [
       {
         element: '#nav-practice-sites',
@@ -54,8 +56,14 @@ export const practicePagesTour = () => {
 // Tour general de bienvenida - Muestra todos los elementos principales
 export const welcomeTour = () => {
   const driverObj = driver({
-    ...baseConfig,
-    showButtons: ['next', 'previous', 'close'] as const,
+    animate: true,
+    doneBtnText: '✓',
+    closeBtnText: '×',
+    nextBtnText: '→',
+    prevBtnText: '←',
+    showProgress: false,
+    popoverClass: 'driverjs-theme-spotlight',
+    showButtons: ['next', 'previous', 'close'],
     steps: [
       {
         element: '#nav-projects',
