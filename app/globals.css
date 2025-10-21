@@ -266,18 +266,31 @@
   }
 }
 
-/* Popover minimalista y compacto */
+/* Popover minimalista y compacto - Responsive */
 .driverjs-theme-spotlight .driver-popover {
   background: rgba(30, 41, 59, 0.95);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(59, 130, 246, 0.4);
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 10px 12px;
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.5),
     0 0 20px rgba(59, 130, 246, 0.2);
-  max-width: 280px;
+  max-width: 240px;
   animation: slideIn 0.3s ease-out;
+}
+
+@media (min-width: 640px) {
+  .driverjs-theme-spotlight .driver-popover {
+    padding: 12px 16px;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 768px) {
+  .driverjs-theme-spotlight .driver-popover {
+    max-width: 320px;
+  }
 }
 
 @keyframes slideIn {
@@ -292,38 +305,66 @@
 }
 
 .driverjs-theme-spotlight .driver-popover-title {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #60a5fa;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   border: none;
   padding: 0;
 }
 
+@media (min-width: 640px) {
+  .driverjs-theme-spotlight .driver-popover-title {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+}
+
 .driverjs-theme-spotlight .driver-popover-description {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   color: #cbd5e1;
   margin: 0;
 }
 
-/* Botones minimalistas */
+@media (min-width: 640px) {
+  .driverjs-theme-spotlight .driver-popover-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* Botones minimalistas - Responsive */
 .driverjs-theme-spotlight .driver-popover-footer {
-  margin-top: 12px;
+  margin-top: 10px;
   display: flex;
-  gap: 8px;
+  gap: 6px;
   justify-content: flex-end;
 }
 
+@media (min-width: 640px) {
+  .driverjs-theme-spotlight .driver-popover-footer {
+    margin-top: 12px;
+    gap: 8px;
+  }
+}
+
 .driverjs-theme-spotlight .driver-popover-footer button {
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
-  min-width: 32px;
+  min-width: 28px;
+}
+
+@media (min-width: 640px) {
+  .driverjs-theme-spotlight .driver-popover-footer button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    min-width: 32px;
+  }
 }
 
 .driverjs-theme-spotlight .driver-popover-next-btn {
