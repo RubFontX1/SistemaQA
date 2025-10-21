@@ -1,22 +1,16 @@
-import { driver, DriveStep, Config } from "driver.js";
+import { driver, DriveStep } from "driver.js";
 import "driver.js/dist/driver.css";
 
 // Configuración base para todos los tours - Estilo minimalista con spotlight
-const baseConfig: Partial<Config> = {
+const baseConfig = {
   animate: true,
-  opacity: 0.8,
-  padding: 10,
-  allowClose: true,
-  overlayClickNext: false,
   doneBtnText: '✓',
   closeBtnText: '×',
   nextBtnText: '→',
   prevBtnText: '←',
   showProgress: false,
-  progressText: '',
   popoverClass: 'driverjs-theme-spotlight',
-  showButtons: ['next', 'close'] as Config['showButtons'],
-  disableActiveInteraction: false,
+  showButtons: ['next', 'close'] as const,
 };
 
 // Tour: Cómo llegar a las pruebas de humo
@@ -61,7 +55,7 @@ export const practicePagesTour = () => {
 export const welcomeTour = () => {
   const driverObj = driver({
     ...baseConfig,
-    showButtons: ['next', 'previous', 'close'] as Config['showButtons'],
+    showButtons: ['next', 'previous', 'close'] as const,
     steps: [
       {
         element: '#nav-projects',
