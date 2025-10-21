@@ -4,12 +4,6 @@ import "driver.js/dist/driver.css";
 // Tour: Cómo llegar a las pruebas de humo
 export const smokeTour = () => {
   const driverObj = driver({
-    animate: true,
-    doneBtnText: '✓',
-    closeBtnText: '×',
-    nextBtnText: '→',
-    prevBtnText: '←',
-    showProgress: false,
     popoverClass: 'driverjs-theme-spotlight',
     showButtons: ['next', 'close'],
     steps: [
@@ -30,12 +24,6 @@ export const smokeTour = () => {
 // Tour: Ir a la sección de páginas de pruebas
 export const practicePagesTour = () => {
   const driverObj = driver({
-    animate: true,
-    doneBtnText: '✓',
-    closeBtnText: '×',
-    nextBtnText: '→',
-    prevBtnText: '←',
-    showProgress: false,
     popoverClass: 'driverjs-theme-spotlight',
     showButtons: ['next', 'close'],
     steps: [
@@ -56,12 +44,6 @@ export const practicePagesTour = () => {
 // Tour general de bienvenida - Muestra todos los elementos principales
 export const welcomeTour = () => {
   const driverObj = driver({
-    animate: true,
-    doneBtnText: '✓',
-    closeBtnText: '×',
-    nextBtnText: '→',
-    prevBtnText: '←',
-    showProgress: false,
     popoverClass: 'driverjs-theme-spotlight',
     showButtons: ['next', 'previous', 'close'],
     steps: [
