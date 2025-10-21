@@ -225,3 +225,162 @@
     background-position: 1000px 0;
   }
 }
+
+/* ====================================
+   Driver.js - Estilo Spotlight Minimalista
+   ==================================== */
+
+/* Overlay oscuro con efecto spotlight */
+.driver-overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Elemento destacado con efecto de foco/spotlight */
+.driver-active-element {
+  outline: none !important;
+  border-radius: 8px;
+  position: relative;
+  box-shadow:
+    0 0 0 4px rgba(59, 130, 246, 0.5),
+    0 0 0 9999px rgba(0, 0, 0, 0.85),
+    0 0 40px 10px rgba(59, 130, 246, 0.6),
+    0 0 80px 20px rgba(14, 165, 233, 0.4);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 4px rgba(59, 130, 246, 0.5),
+      0 0 0 9999px rgba(0, 0, 0, 0.85),
+      0 0 40px 10px rgba(59, 130, 246, 0.6),
+      0 0 80px 20px rgba(14, 165, 233, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(59, 130, 246, 0.7),
+      0 0 0 9999px rgba(0, 0, 0, 0.85),
+      0 0 50px 15px rgba(59, 130, 246, 0.8),
+      0 0 100px 25px rgba(14, 165, 233, 0.6);
+  }
+}
+
+/* Popover minimalista y compacto */
+.driverjs-theme-spotlight .driver-popover {
+  background: rgba(30, 41, 59, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.2);
+  max-width: 280px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.driverjs-theme-spotlight .driver-popover-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #60a5fa;
+  margin-bottom: 6px;
+  border: none;
+  padding: 0;
+}
+
+.driverjs-theme-spotlight .driver-popover-description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+/* Botones minimalistas */
+.driverjs-theme-spotlight .driver-popover-footer {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.driverjs-theme-spotlight .driver-popover-footer button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  min-width: 32px;
+}
+
+.driverjs-theme-spotlight .driver-popover-next-btn {
+  background: rgba(59, 130, 246, 0.9);
+  color: white;
+}
+
+.driverjs-theme-spotlight .driver-popover-next-btn:hover {
+  background: rgba(59, 130, 246, 1);
+  transform: scale(1.05);
+}
+
+.driverjs-theme-spotlight .driver-popover-prev-btn {
+  background: rgba(100, 116, 139, 0.3);
+  color: #cbd5e1;
+}
+
+.driverjs-theme-spotlight .driver-popover-prev-btn:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+
+.driverjs-theme-spotlight .driver-popover-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: rgba(100, 116, 139, 0.2);
+  color: #94a3b8;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.driverjs-theme-spotlight .driver-popover-close-btn:hover {
+  background: rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+/* Flecha del popover */
+.driverjs-theme-spotlight .driver-popover-arrow {
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.driverjs-theme-spotlight .driver-popover-arrow-side-top {
+  border-top-color: rgba(30, 41, 59, 0.95);
+}
+
+.driverjs-theme-spotlight .driver-popover-arrow-side-bottom {
+  border-bottom-color: rgba(30, 41, 59, 0.95);
+}
+
+.driverjs-theme-spotlight .driver-popover-arrow-side-left {
+  border-left-color: rgba(30, 41, 59, 0.95);
+}
+
+.driverjs-theme-spotlight .driver-popover-arrow-side-right {
+  border-right-color: rgba(30, 41, 59, 0.95);
+}

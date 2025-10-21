@@ -7,7 +7,15 @@
       "Bash(git config:*)",
       "Bash(export VERCEL_TOKEN=\"ATf6nkTO2d0jLsNkxXcdU43i\")",
       "Bash(vercel:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(git push:*)",
+      "Bash(npx vercel:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(npm install:*)",
+      "Bash(dir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx shadcn@latest add:*)"
     ],
     "deny": [],
     "ask": []

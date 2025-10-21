@@ -2,8 +2,16 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { FlaskConical, Menu, Sparkles, Github, Workflow } from "lucide-react"
+import { FlaskConical, Menu, Sparkles, Github, Workflow, Rocket, Target, HelpCircle } from "lucide-react"
 import { ThemeToggle } from "@/components/shared/ThemeToggle"
+import { smokeTour, practicePagesTour, welcomeTour } from "@/lib/tours"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu"
 
 export function Navbar() {
   return (
@@ -22,6 +30,23 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center space-x-6">
             <Link
+              id="nav-projects"
+              href="/projects"
+              className="text-sm font-medium transition-all hover:text-primary hover:scale-105 flex items-center gap-1"
+            >
+              <Rocket className="h-4 w-4" />
+              Proyectos
+            </Link>
+            <Link
+              id="nav-practice-sites"
+              href="/practice-sites"
+              className="text-sm font-medium transition-all hover:text-primary hover:scale-105 flex items-center gap-1"
+            >
+              <Target className="h-4 w-4" />
+              Practica en Sitios Reales
+            </Link>
+            <Link
+              id="nav-practice"
               href="/modules/pruebas-web"
               className="text-sm font-medium transition-all hover:text-primary hover:scale-105 flex items-center gap-1"
             >
@@ -29,6 +54,7 @@ export function Navbar() {
               Módulos
             </Link>
             <Link
+              id="nav-study"
               href="https://github.com"
               target="_blank"
               className="text-sm font-medium transition-all hover:text-accent hover:scale-105 flex items-center gap-1"
@@ -40,6 +66,43 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/10 hover:text-primary"
+                title="Tours Guiados"
+              >
+                <HelpCircle className="h-5 w-5" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuItem onClick={() => welcomeTour()} className="cursor-pointer">
+                <Sparkles className="mr-2 h-4 w-4 text-primary" />
+                <div>
+                  <div className="font-medium">Tour de Bienvenida</div>
+                  <div className="text-xs text-muted-foreground">Conoce Sistema QA</div>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onClick={() => smokeTour()} className="cursor-pointer">
+                <Workflow className="mr-2 h-4 w-4 text-accent" />
+                <div>
+                  <div className="font-medium">Pruebas de Humo</div>
+                  <div className="text-xs text-muted-foreground">Cómo llegar a las pruebas</div>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => practicePagesTour()} className="cursor-pointer">
+                <Target className="mr-2 h-4 w-4 text-accent" />
+                <div>
+                  <div className="font-medium">Páginas de Práctica</div>
+                  <div className="text-xs text-muted-foreground">Sitios para practicar QA</div>
+                </div>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <ThemeToggle />
 
           <Button variant="ghost" size="icon" className="md:hidden hover:bg-primary/10">
