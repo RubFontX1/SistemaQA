@@ -1,8 +1,8 @@
-import { driver, DriveStep } from "driver.js";
+import { driver, DriveStep, Config } from "driver.js";
 import "driver.js/dist/driver.css";
 
 // Configuración base para todos los tours - Estilo minimalista con spotlight
-const baseConfig = {
+const baseConfig: Partial<Config> = {
   animate: true,
   opacity: 0.8,
   padding: 10,
@@ -15,7 +15,7 @@ const baseConfig = {
   showProgress: false,
   progressText: '',
   popoverClass: 'driverjs-theme-spotlight',
-  showButtons: ['next', 'close'],
+  showButtons: ['next', 'close'] as Config['showButtons'],
   disableActiveInteraction: false,
 };
 
@@ -61,7 +61,7 @@ export const practicePagesTour = () => {
 export const welcomeTour = () => {
   const driverObj = driver({
     ...baseConfig,
-    showButtons: ['next', 'previous', 'close'],
+    showButtons: ['next', 'previous', 'close'] as Config['showButtons'],
     steps: [
       {
         element: '#nav-projects',
